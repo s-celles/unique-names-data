@@ -10,7 +10,7 @@ def check_duplicates(file_path):
             return 0
         
         if df['word'].dtype != 'object':
-            print(f"Warning: 'word' column in {file_path} is not of string type. Skipping duplicate check.")
+            print(f"Warning: 'word' column in {file_path} is not of string type. Skipping checks.")
             return 0
 
         # Check for empty words
