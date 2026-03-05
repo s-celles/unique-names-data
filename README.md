@@ -102,6 +102,24 @@ This data package follows [Semantic Versioning](https://semver.org/):
 - **MINOR:** New dictionaries or significant word additions
 - **PATCH:** Word corrections, small additions, or metadata updates
 
+## Release Workflow
+
+This repository uses GitHub Actions to automate the release process. A new release is created automatically when a commit on the `main` branch includes a specific message format.
+
+To trigger a new release:
+
+1.  **Update Version:** Increment the `version` property in the `datapackage.json` file according to Semantic Versioning rules.
+2.  **Commit Changes:** Commit the updated `datapackage.json` with a commit message containing `chore(release):`.
+
+    ```bash
+    git commit -m "chore(release): bump version to X.Y.Z"
+    ```
+
+This will trigger a workflow that:
+- Creates a Git tag corresponding to the new version.
+- Publishes a GitHub Release with the tag.
+- Attaches a `unique-names-data.zip` archive containing the full data package as a release asset.
+
 ## License
 
 This work is dedicated to the public domain under [CC0 1.0 Universal](LICENSE).
