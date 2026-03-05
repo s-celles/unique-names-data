@@ -1,0 +1,71 @@
+name: Content Report
+description: Report an inappropriate word or combination.
+title: "Content Report: [Word or Combination]"
+labels: ["content-report", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for helping us maintain a safe and positive word list. Please provide the following details.
+
+  - type: input
+    id: word
+    attributes:
+      label: "Problematic Word(s)"
+      description: "The word or combination of words you are reporting."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: dictionary
+    attributes:
+      label: "Dictionary"
+      description: "Which dictionary contains the word? (If applicable)"
+      options:
+        - "adjectives"
+        - "colors"
+        - "animals"
+        - "celestial"
+        - "nature"
+        - "science"
+        - "numbers"
+        - "N/A (Combination)"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: "Category of Issue"
+      description: "How would you classify this issue?"
+      options:
+        - "profane"
+        - "sexual"
+        - "offensive"
+        - "discriminatory"
+        - "violent"
+        - "ambiguous"
+        - "other"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: "Severity"
+      description: "How severe is the issue?"
+      options:
+        - "1 (Mildly inappropriate)"
+        - "2 (Moderately offensive)"
+        - "3 (Strongly offensive)"
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: "Context and Explanation"
+      description: "Please explain why this content is problematic. If it's a combination, provide the words that form the offensive phrase."
+      placeholder: "e.g., The word '...' can be used as a slur, or 'word A' + 'word B' forms an offensive phrase."
+    validations:
+      required: true

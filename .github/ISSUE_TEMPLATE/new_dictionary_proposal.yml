@@ -1,0 +1,50 @@
+name: New Dictionary Proposal
+description: Propose a new word list for the data package.
+title: "New Dictionary: [Dictionary Name]"
+labels: ["enhancement", "new-dictionary"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting a new dictionary! Please provide the following information to help us evaluate your proposal.
+
+  - type: input
+    id: dict-name
+    attributes:
+      label: "Dictionary Name"
+      description: "A single, descriptive name for the new dictionary (e.g., `mythology`, `verbs`, `places`)."
+      placeholder: "e.g., mythology"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: "Description and Use Case"
+      description: "Explain what this dictionary contains and why it would be a valuable addition."
+      placeholder: "e.g., This dictionary contains figures and creatures from world mythologies, useful for fantasy-themed name generation."
+    validations:
+      required: true
+
+  - type: textarea
+    id: word-list
+    attributes:
+      label: "Initial Word List (at least 30 words)"
+      description: "Please provide a starting list of at least 30 words, one per line. Include potential categories in parentheses."
+      placeholder: |
+        Phoenix (creature)
+        Atlas (titan)
+        Aurora (deity)
+        Fenrir (creature)
+        Pegasus (creature)
+    validations:
+      required: true
+
+  - type: input
+    id: categories
+    attributes:
+      label: "Proposed Categories"
+      description: "List the categories you've used in the word list above."
+      placeholder: "e.g., creature, deity, titan, place"
+    validations:
+      required: true

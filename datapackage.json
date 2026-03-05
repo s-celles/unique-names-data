@@ -1,0 +1,287 @@
+{
+  "$schema": "https://datapackage.org/profiles/2.0/datapackage.json",
+  "name": "unique-names-data",
+  "title": "Unique Names Data Package",
+  "description": "A Frictionless Data Package containing curated word lists for generating unique, memorable names. Designed for use with name generators across multiple programming languages.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/s-celles/unique-names-data",
+  "licenses": [
+    {
+      "name": "CC0-1.0",
+      "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "title": "CC0 1.0 Universal"
+    }
+  ],
+  "contributors": [
+    {
+      "title": "Sébastien Celles",
+      "role": "author"
+    }
+  ],
+  "keywords": [
+    "unique-names",
+    "name-generator",
+    "word-lists",
+    "dictionaries",
+    "frictionless-data"
+  ],
+  "created": "2026-03-05T00:00:00Z",
+  "resources": [
+    {
+      "name": "adjectives",
+      "title": "Adjectives",
+      "description": "General adjectives including traits, qualities, and abstract terms",
+      "path": "data/adjectives.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "schema": {
+        "fields": [
+          {
+            "name": "word",
+            "type": "string",
+            "description": "The adjective word",
+            "constraints": {
+              "required": true,
+              "minLength": 1
+            }
+          },
+          {
+            "name": "category",
+            "type": "string",
+            "description": "Category classification (e.g., personality, physical, abstract)"
+          }
+        ],
+        "primaryKey": ["word"]
+      }
+    },
+    {
+      "name": "colors",
+      "title": "Colors",
+      "description": "Color names for themed name generation",
+      "path": "data/colors.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "schema": {
+        "fields": [
+          {
+            "name": "word",
+            "type": "string",
+            "description": "The color name",
+            "constraints": {
+              "required": true,
+              "minLength": 1
+            }
+          },
+          {
+            "name": "category",
+            "type": "string",
+            "description": "Color family (e.g., red, blue, metallic)"
+          }
+        ],
+        "primaryKey": ["word"]
+      }
+    },
+    {
+      "name": "animals",
+      "title": "Animals",
+      "description": "Animal species names",
+      "path": "data/animals.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "schema": {
+        "fields": [
+          {
+            "name": "word",
+            "type": "string",
+            "description": "The animal name",
+            "constraints": {
+              "required": true,
+              "minLength": 1
+            }
+          },
+          {
+            "name": "category",
+            "type": "string",
+            "description": "Animal classification (e.g., mammal, bird, reptile)"
+          }
+        ],
+        "primaryKey": ["word"]
+      }
+    },
+    {
+      "name": "celestial",
+      "title": "Celestial",
+      "description": "Space and astronomy terms",
+      "path": "data/celestial.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "schema": {
+        "fields": [
+          {
+            "name": "word",
+            "type": "string",
+            "description": "The celestial term",
+            "constraints": {
+              "required": true,
+              "minLength": 1
+            }
+          },
+          {
+            "name": "category",
+            "type": "string",
+            "description": "Celestial classification (e.g., star, planet, phenomenon)"
+          }
+        ],
+        "primaryKey": ["word"]
+      }
+    },
+    {
+      "name": "nature",
+      "title": "Nature",
+      "description": "Natural elements and phenomena",
+      "path": "data/nature.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "schema": {
+        "fields": [
+          {
+            "name": "word",
+            "type": "string",
+            "description": "The nature term",
+            "constraints": {
+              "required": true,
+              "minLength": 1
+            }
+          },
+          {
+            "name": "category",
+            "type": "string",
+            "description": "Nature classification (e.g., landform, water, weather)"
+          }
+        ],
+        "primaryKey": ["word"]
+      }
+    },
+    {
+      "name": "science",
+      "title": "Science",
+      "description": "Scientific terms from physics, chemistry, biology, and computing",
+      "path": "data/science.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "schema": {
+        "fields": [
+          {
+            "name": "word",
+            "type": "string",
+            "description": "The scientific term",
+            "constraints": {
+              "required": true,
+              "minLength": 1
+            }
+          },
+          {
+            "name": "category",
+            "type": "string",
+            "description": "Scientific domain (e.g., physics, chemistry, biology)"
+          }
+        ],
+        "primaryKey": ["word"]
+      }
+    },
+    {
+      "name": "numbers",
+      "title": "Numbers",
+      "description": "Numeric strings (0-99)",
+      "path": "data/numbers.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "schema": {
+        "fields": [
+          {
+            "name": "word",
+            "type": "string",
+            "description": "The numeric string",
+            "constraints": {
+              "required": true,
+              "minLength": 1
+            }
+          }
+        ],
+        "primaryKey": ["word"]
+      }
+    },
+    {
+      "name": "blocklist",
+      "title": "Blocklist",
+      "description": "Words excluded from dictionaries due to inappropriate content",
+      "path": "data/blocklist.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "schema": {
+        "fields": [
+          {
+            "name": "word",
+            "type": "string",
+            "description": "The excluded word (lowercase)",
+            "constraints": {
+              "required": true,
+              "minLength": 1
+            }
+          },
+          {
+            "name": "source_dictionary",
+            "type": "string",
+            "description": "The dictionary the word was removed from, or * if blocked globally"
+          },
+          {
+            "name": "category",
+            "type": "string",
+            "description": "Classification: profane, sexual, offensive, discriminatory, violent, ambiguous, or other",
+            "constraints": {
+              "required": true,
+              "enum": ["profane", "sexual", "offensive", "discriminatory", "violent", "ambiguous", "other"]
+            }
+          },
+          {
+            "name": "severity",
+            "type": "integer",
+            "description": "Severity level from 1 (mildly inappropriate) to 3 (strongly offensive)",
+            "constraints": {
+              "required": true,
+              "minimum": 1,
+              "maximum": 3
+            }
+          },
+          {
+            "name": "reported_by",
+            "type": "string",
+            "description": "GitHub issue or PR reference where the word was reported"
+          },
+          {
+            "name": "date_added",
+            "type": "date",
+            "description": "Date the word was added to the blocklist (ISO 8601)",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "notes",
+            "type": "string",
+            "description": "Free-text explanation"
+          }
+        ],
+        "primaryKey": ["word"]
+      }
+    }
+  ]
+}
