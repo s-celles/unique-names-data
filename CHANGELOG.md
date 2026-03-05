@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.1] - 2026-03-05
+
+### Changed
+
+- Release assets are now also in `tar.gz` format.
+
 ## [0.1.0] - 2026-03-05
 
 ### Added
@@ -32,5 +38,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **CI/CD:**
   - GitHub Actions workflow for validation
 
-[Unreleased]: https://github.com/s-celles/unique-names-data/compare/v0.1.0...HEAD
+[Unreleased]: https://github.com/s-celles/unique-names-data/compare/v0.1.1...HEAD
+[0.1.1]: https://github.com/s-celles/unique-names-data/compare/v0.1.0...v0.1.1
 [0.1.0]: https://github.com/s-celles/unique-names-data/releases/tag/v0.1.0

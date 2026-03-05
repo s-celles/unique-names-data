@@ -3,7 +3,7 @@
   "name": "unique-names-data",
   "title": "Unique Names Data Package",
   "description": "A Frictionless Data Package containing curated word lists for generating unique, memorable names. Designed for use with name generators across multiple programming languages.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/s-celles/unique-names-data",
   "licenses": [
     {

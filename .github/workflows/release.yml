@@ -27,9 +27,10 @@ jobs:
           git tag -a "v${{ steps.package_version.outputs.version }}" -m "Release v${{ steps.package_version.outputs.version }}"
           git push origin "v${{ steps.package_version.outputs.version }}"
 
-      - name: Create Release Asset
+      - name: Create Release Assets
         run: |
           zip -r unique-names-data.zip data/ datapackage.json README.md LICENSE
+          tar -czvf unique-names-data.tar.gz data/ datapackage.json README.md LICENSE
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v1
@@ -39,6 +40,8 @@ jobs:
           body: |
             Release of version ${{ steps.package_version.outputs.version }}.
             See the [CHANGELOG.md](CHANGELOG.md) for details.
-          files: unique-names-data.zip
+          files: |
+            unique-names-data.zip
+            unique-names-data.tar.gz
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
