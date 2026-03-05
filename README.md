@@ -17,6 +17,7 @@ This repository provides language-agnostic word lists that can be consumed by an
 | `nature` | [data/nature.csv](data/nature.csv) | 50 | Natural elements and phenomena | Glacier, Ember, Cascade, Fjord |
 | `science` | [data/science.csv](data/science.csv) | 50 | Scientific terms | Photon, Prism, Quark, Helix |
 | `numbers` | [data/numbers.csv](data/numbers.csv) | 100 | Numeric strings (0-99) | 0, 1, 42, 99 |
+| `nato` | [data/nato.csv](data/nato.csv) | 26 | NATO phonetic alphabet | Alpha, Bravo, Charlie, Delta |
 
 ## Default Name Grammar
 

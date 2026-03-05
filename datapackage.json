@@ -219,6 +219,29 @@
       }
     },
     {
+      "name": "nato",
+      "title": "NATO Phonetic Alphabet",
+      "description": "The 26 code words in the NATO phonetic alphabet",
+      "path": "data/nato.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "schema": {
+        "fields": [
+          {
+            "name": "word",
+            "type": "string",
+            "description": "The NATO phonetic alphabet code word",
+            "constraints": {
+              "required": true,
+              "minLength": 1
+            }
+          }
+        ],
+        "primaryKey": ["word"]
+      }
+    },
+    {
       "name": "blocklist",
       "title": "Blocklist",
       "description": "Words excluded from dictionaries due to inappropriate content",
