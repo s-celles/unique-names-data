@@ -135,6 +135,7 @@ Contributions are welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) for gu
 
 ## Related Projects
 
+- [s-celles/UniqueNamesGenerator.jl](https://github.com/s-celles/UniqueNamesGenerator.jl) - A unique name generator for Julia.
 - [unique-names-generator](https://github.com/andreasonny83/unique-names-generator) - JavaScript name generator (npm)
 - [Issue #82](https://github.com/andreasonny83/unique-names-generator/issues/82) - Proposal to split data from code
 - [Issue #66](https://github.com/andreasonny83/unique-names-generator/issues/66) - Content moderation discussion
