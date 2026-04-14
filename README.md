@@ -110,16 +110,19 @@ This repository uses GitHub Actions to automate the release process. A new relea
 To trigger a new release:
 
 1.  **Update Version:** Increment the `version` property in the `datapackage.json` file according to Semantic Versioning rules.
-2.  **Commit Changes:** Commit the updated `datapackage.json` with a commit message containing `chore(release):`.
+2.  **Update CHANGELOG.md:** Move entries from `[Unreleased]` into a new `[X.Y.Z] - YYYY-MM-DD` section and update the compare links at the bottom of the file.
+3.  **Commit Changes:** Stage both `datapackage.json` and `CHANGELOG.md` and commit with a message containing `chore(release):`.
 
     ```bash
+    git add datapackage.json CHANGELOG.md
     git commit -m "chore(release): bump version to X.Y.Z"
+    git push origin main
     ```
 
 This will trigger a workflow that:
-- Creates a Git tag corresponding to the new version.
+- Creates a Git tag `vX.Y.Z` corresponding to the new version.
 - Publishes a GitHub Release with the tag.
-- Attaches a `unique-names-data.zip` archive containing the full data package as a release asset.
+- Attaches `unique-names-data.zip` and `unique-names-data.tar.gz` archives containing the full data package (`data/`, `datapackage.json`, `README.md`, `LICENSE`) as release assets.
 
 ## License
 
